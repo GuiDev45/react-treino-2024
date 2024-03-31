@@ -22,28 +22,27 @@ const produtos = [
 ];
 
 export default function JsxArrayExerc() {
+  const produtosFiltrados = produtos.filter(
+    (produto) => Number(produto.preco.replace("R$ ", "")) > 1500,
+  );
+
   return (
     <div>
       <h2>Exercício / 008 - JSX Array</h2>
       <section>
-        {produtos
-          .filter((produto) => Number(produto.preco.replace("R$ ", "")) > 1500)
-          .map((produto) => (
-            <div key={produto.id}>
-              <h1>{produto.nome}</h1>
-              <p>Preço: {produto.preco}</p>
-              <ul>
-                {produto.cores.map((cor) => (
-                  <li
-                    key={cor}
-                    style={{ backgroundColor: cor, color: "white" }}
-                  >
-                    {cor}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+        {produtosFiltrados.map((produto) => (
+          <div key={produto.id}>
+            <h1>{produto.nome}</h1>
+            <p>Preço: {produto.preco}</p>
+            <ul>
+              {produto.cores.map((cor) => (
+                <li key={cor} style={{ backgroundColor: cor, color: "white" }}>
+                  {cor}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </section>
     </div>
   );
