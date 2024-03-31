@@ -1,0 +1,40 @@
+/* Reset CSS */
+
+/* Regras de box sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Remover margem padrão */
+body, h1, h2, h3, h4, p, figure, blockquote, dl, dd {
+  margin: 0;
+}
+
+/* Remover padding padrão */
+ul[class], ol[class] {
+  padding: 0;
+}
+
+/* Definir padrões básicos do corpo */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remover estilos de lista */
+ul, ol {
+  list-style: none;
+}
+
+/* Remover decoração de texto de âncora */
+a {
+  text-decoration: none;
+}
+
+/* Facilitar o trabalho com imagens */
+img {
+  max-width: 100%;
+  display: block;
+}
